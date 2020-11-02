@@ -18,15 +18,15 @@ body {
   @include fw400;
   line-height: 1.2;
   color: $text;
-  background-color: $bg;
+  background-color: $white;
   height: 100%;
 }
 main {
   width: 100%;
 }
 .container {
-  max-width: 75rem;
-  padding: 0 0.95rem;
+  width: 1260px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 ul,
@@ -53,80 +53,7 @@ h6 {
   margin: 0;
   padding: 0;
 }
-section {
-  padding: rem(80px) 0;
-  position: relative;
-  width: 100%;
-  &:nth-child(odd) {
-    background-color: $white;
-  }
-  &::before {
-    content: '';
-    position: absolute;
-    width: 6.25;
-    height: rem(4px);
-    background-color: $red;
-    border-radius: rem(1px);
-    bottom: rem(-2px);
-    left: 50%;
-    transform: translate(-50%);
-    z-index: 1;
-  }
-}
-.btn {
-  font-size: rem(24px);
-  font-weight: 600;
-  letter-spacing: rem(2px);
-  color: $bg;
-  background-color: $red;
-  display: block;
-  width: rem(200px);
-  height: rem(58px);
-  padding: rem(15px) rem(20px);
-  border-radius: rem(10px);
-  box-shadow: 0px 4px 5px -1px red;
-  text-align: right;
-  position: relative;
-  transition: all 0.2s;
-  &:before {
-    position: absolute;
-    content: '\f25a';
-    font-family: 'icomoon';
-    color: #5e4d4d;
-    top: rem(15px);
-    left: rem(18px);
-  }
-  &:hover,
-  &:focus {
-    opacity: 0.9;
-  }
-  &:active {
-    transform: scale(0.9);
-  }
-}
 input {
   border: none;
-}
-.title {
-  font-size: rem(45px);
-  color: $red;
-  margin-bottom: rem(30px);
-}
-.inner {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-.item {
-  @include item-list;
-  font-size: 1.12rem;
-  font-weight: 500;
-  color: $text;
-  padding: rem(15px) 0px rem(15px) rem(30px);
-}
-.image {
-  img {
-    max-width: rem(500px);
-  }
+  outline: none;
 }

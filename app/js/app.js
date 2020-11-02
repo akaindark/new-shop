@@ -1,30 +1,17 @@
 
 $(function () {
-  //Slider-1
+  //Slider
 
-  $('.slider').slick({
-    dots: true,
-    infinite: true,
+  $('.slider__list').slick({
+    // dots: false,
     speed: 1000,
-    slidesToShow: 1,
-    fade: true,
-    arrows: false,
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    arrows: true,
     adaptiveHeight: true,
     autoplay: true,
     autoplaySpeed: 5000
-  });
-
-  //Slider-2
-
-  $('.spec__slider').slick({
-    infinite: true,
-    speed: 1500,
-    slidesToShow: 1,
-    fade: true,
-    arrows: false,
-    adaptiveHeight: true,
-    autoplay: true,
-    autoplaySpeed: 3000
   });
 
   //Gamburger
