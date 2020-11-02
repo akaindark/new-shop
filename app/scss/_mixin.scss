@@ -1,3 +1,34 @@
+@mixin fw300 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+}
+@mixin fw400 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+}
+@mixin fw500 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
+@mixin fw600 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+}
+@mixin item-list {
+  position: relative;
+  &::before {
+    content: "\f105";
+    position: absolute;
+    font-family: "icomoon";
+    color: $red;
+    display: block;
+    left: rem(10px);
+    top: rem(14px);
+  }
+}
+
+//responsiv
+
 @function rem($px) {
-  @return $px/18px + 0rem;
+  @return $px/16px + 0rem;
 } ;

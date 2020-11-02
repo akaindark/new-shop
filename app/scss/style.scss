@@ -4,5 +4,185 @@
 @import 'fonts';
 
 /*=====Header=====*/
-@import './blocks/_header.scss';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: $bg;
+  box-shadow: 0px 4px 80px 0px $phone;
+  &__logo {
+    img {
+      width: auto;
+      height: rem(45px);
+    }
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    height: rem(80px);
+    align-items: center;
+    position: relative;
+  }
+  &__menu-btn {
+    width: rem(25px);
+    display: none;
+    position: absolute;
+    right: rem(20px);
+    top: rem(30px);
+  }
+  &__menu-row {
+    width: 100%;
+    height: rem(3px);
+    margin-bottom: rem(4px);
+    background-color: $title;
+  }
+  &__btn {
+    display: none;
+  }
+}
+.menu {
+  &__item {
+    display: inline-block;
+    & + li {
+      margin-left: rem(30px);
+    }
+  }
+  &__link {
+    font-size: rem(18px);
+    color: $text;
+    font-weight: 400;
+    padding: rem(10px) 0px;
+    transition: all 0.3s;
+    position: relative;
+    margin-left: rem(20px);
+    &:hover,
+    &:focus {
+      color: $red;
+    }
+    &-1 {
+      &::before {
+        content: '\f164';
+        font-family: 'icomoon';
+        position: absolute;
+        left: rem(-25px);
+        top: rem(10px);
+      }
+    }
+    &-2 {
+      &::before {
+        content: '\f013';
+        font-family: 'icomoon';
+        position: absolute;
+        left: rem(-25px);
+        top: rem(10px);
+      }
+    }
+    &-3 {
+      &::before {
+        content: '\f03a';
+        font-family: 'icomoon';
+        position: absolute;
+        left: rem(-25px);
+        top: rem(10px);
+      }
+    }
+    &-4 {
+      display: none;
+      background-color: $red;
+      border-radius: rem(208px);
+      padding: rem(10px) rem(20px);
+      color: $bg;
+      &:hover {
+        color: $white;
+        box-shadow: 0px 0px 5px 0px $red;
+      }
+    }
+  }
+}
+
+/*=====Footer=====*/
+
+.footer {
+  background-color: $red;
+  padding: 20px 0px;
+  &__link {
+    color: $white;
+    font-size: 20px;
+    margin: 10px 0px;
+    display: block;
+    text-align: center;
+    transition: all 0.2s;
+    &:hover,
+    &:focus {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.btn-up {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 150px;
+  transition: all 0.3s;
+  &::before {
+    content: '\f062';
+    font-family: 'icomoon';
+    padding: 15px;
+    border-radius: 50%;
+    color: $bg;
+    background-color: $red;
+  }
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+}
+
 @import 'media';
+
+.block_more_info {
+  max-width: 800px;
+
+  margin: 0px auto;
+  background: #fff;
+  font-family: Arial;
+  padding: 20px 40px 40px 40px;
+  border: 1px solid #dadada;
+  line-height: 20px;
+  background-image: url('../images/dest/bg.webp');
+  h1 {
+    color: #3b6a7c;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  h2 {
+    padding: 20px 0px;
+  }
+  ol,
+  li {
+    list-style: decimal;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  p {
+    padding: 15px 0px;
+  }
+}
+.s1 {
+  font-style: italic;
+  text-align: center;
+  margin: 40px 0 0 0;
+  font-weight: bold;
+}
+@media screen and (max-width: 540px) {
+  .block_more_info {
+    padding: 0 10px;
+  }
+  .block_more_info h1 {
+    font-size: 27px;
+  }
+}
